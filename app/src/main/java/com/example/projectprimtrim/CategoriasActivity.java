@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CategoriasActivity extends AppCompatActivity {
 
-    public String descripcionCat, gameCat;
+    public String descripcionCat, gameCat, descripcionDetCat;
     int numCat;
     public static Game gameSelected;
 
@@ -41,8 +41,8 @@ public class CategoriasActivity extends AppCompatActivity {
         ListView listadoGames = findViewById(R.id.lvItems);
 
         // Cabecera del listado
-        View cabeceraGV = getLayoutInflater().inflate(R.layout.cabezera_lista, null);
-        listadoGames.addHeaderView(cabeceraGV);
+        View viewListado = getLayoutInflater().inflate(R.layout.cabezera_lista, null);
+        listadoGames.addHeaderView(viewListado);
 
         // Instanciamos y asignamos el adaptador personalizado
         AdapterGame adaptador = new AdapterGame(this, games);
@@ -57,28 +57,31 @@ public class CategoriasActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //gameSelected = (Game) adapterView.getItemAtPosition(i);
 
-
-
-                TextView gameSeleccionado = findViewById(R.id.gtTitle);
+                TextView gameSeleccionado = findViewById(R.id.gameTitle);
                 gameCat = ((Game) adapterView.getItemAtPosition(i)).getGame();
                 gameSeleccionado.setText(gameCat);
 
-                ImageView fotoSeleccionada = findViewById(R.id.gtPhoto);
+                ImageView fotoSeleccionada = findViewById(R.id.gamePhoto);
                 numCat = ((Game) adapterView.getItemAtPosition(i)).getImgPhoto();
                 fotoSeleccionada.setImageResource(numCat);
 
-                TextView descripcionSeleccionada = findViewById(R.id.gtDescripcionDetallada);
+                TextView descripcionSeleccionada = findViewById(R.id.gameDescription);
                 descripcionCat = ((Game) adapterView.getItemAtPosition(i)).getDescripcion();
                 descripcionSeleccionada.setText(descripcionCat);
 
-                lanzarActivity();
+                descripcionDetCat = ((Game) adapterView.getItemAtPosition(i)).getDetallada();
+
+                lanzarActivity(view);
             }
         });
     }
 
-    private void lanzarActivity() {
+    private void lanzarActivity(View view) {
         Intent detalle;
         detalle = new Intent(this, DetalleLista.class);
+        detalle.putExtra("nombreJuego", gameCat);
+        detalle.putExtra("detalladajuego",descripcionDetCat);
+        detalle.putExtra("imagenJuego", numCat);
         startActivity(detalle);
     }
 

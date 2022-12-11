@@ -34,6 +34,7 @@
     <string name="textInitUp">Bienvenido a ES Application ^_^ </string>
     <string name="textInitDown">No dude en contactar con nosotros con sugerencias o errores, estaremos encantados de atender a vuestras peticiones</string>
     <string name="titleCat">Categorias de Juegos</string>
+    <string name="atrasText">Atras</string>
 
 
 </resources>

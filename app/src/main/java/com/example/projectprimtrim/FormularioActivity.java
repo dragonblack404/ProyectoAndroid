@@ -19,7 +19,7 @@ public class FormularioActivity extends AppCompatActivity {
 
 
 
-    
+
     /*
         Barra menu con el icono para volver al inicio
         */
