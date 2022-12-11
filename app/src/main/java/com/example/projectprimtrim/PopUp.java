@@ -1,7 +1,6 @@
 package com.example.projectprimtrim;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -23,8 +22,9 @@ public class PopUp extends AppCompatDialogFragment {
         return builder.create();
     }
 
-
-    public Dialog todoCorrecto(Boolean validador){
+    //TODO
+/*
+    public void todoCorrecto(Boolean validador){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         if (validador){
             builder.setTitle("Enviado con éxito")
@@ -35,7 +35,9 @@ public class PopUp extends AppCompatDialogFragment {
                     .setMessage("Algún campo no se rellenó correctamente")
                     .setPositiveButton("Volver", (dialogInterface, i) -> {});
         }
-        return builder.create();
-    };
+        builder.create();
+    }
+
+ */
 
 }
