@@ -7,14 +7,5 @@
     tools:context=".MainActivity">
 
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:visibility="visible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

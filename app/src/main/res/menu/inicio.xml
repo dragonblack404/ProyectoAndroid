@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/batMenu" android:title="@string/cat_bat"></item>
+        <item android:id="@+id/codMenu" android:title="@string/cat_cod"></item>
+        <item android:id="@+id/lolMenu" android:title="@string/cat_lol"></item>
+        <item android:id="@+id/fifaMenu" android:title="@string/cat_fifa"></item>
+</menu>

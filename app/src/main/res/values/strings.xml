@@ -1,3 +1,17 @@
 <resources>
+    <!-- Nombre de la app -->
     <string name="app_name">ESports Application</string>
+
+    <!-- Categorias de juegos -->
+    <string name="cat_cod">Call of Duty</string>
+    <string name="cat_fifa">FIFA</string>
+    <string name="cat_bat">Battlefield</string>
+    <string name="cat_lol">League of Legends</string>
+
+    <!-- Nombres del menú -->
+    <string name="catgeoriaMenu">Categorias</string>
+    <string name="formularioMenu">Formulario</string>
+    <string name="listaMenu">Lista de compra</string>
+    <string name="AcercaDe">Acerca de</string>
+
 </resources>
