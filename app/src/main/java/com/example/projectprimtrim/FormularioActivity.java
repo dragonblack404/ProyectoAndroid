@@ -41,7 +41,7 @@ public class FormularioActivity extends AppCompatActivity {
 
         ImageButton enviarButton = findViewById(R.id.enviarButton);
         CheckBox terminosCheck = findViewById(R.id.checkForm);
-
+/*
         enviarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +57,8 @@ public class FormularioActivity extends AppCompatActivity {
 
             }
         });
+
+ */
 
     }
 
