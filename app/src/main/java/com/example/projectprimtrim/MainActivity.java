@@ -16,25 +16,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-/*
-    @Override
-    protected void onResume() {
-        super.onResume();
 
-        //Asociamos el
-    }
-*/
-
+    /*
+    Inicializacion de la barra del menú de inicio con los diferentes items creados
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.inicio_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
+    /*
+    Implementenzacion del método para detectar el item escogido, y realizar función según corresponda
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         Intent cambiarActividad;
 
+        //Arrancaremos las actividades correspondientes,y ademas lanzaremos unos Toast para avisar
+        // al usuario por donde se encuentra
         switch (item.getItemId()){
             case R.id.acercaItem:
                 Toast.makeText(this, "Acerca de..", Toast.LENGTH_SHORT).show();
