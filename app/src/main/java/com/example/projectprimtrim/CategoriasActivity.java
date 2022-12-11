@@ -37,6 +37,10 @@ public class CategoriasActivity extends AppCompatActivity {
                 new Game(getString(R.string.cat_lol), getString(R.string.des_lol), R.drawable.lol, getString(R.string.det_lol))
         };
 
+        /*
+        Posible fallo en cabecera de tituos
+         */
+        //TODO
 
         ListView listadoGames = findViewById(R.id.lvItems);
 
@@ -80,7 +84,7 @@ public class CategoriasActivity extends AppCompatActivity {
         Intent detalle;
         detalle = new Intent(this, DetalleLista.class);
         detalle.putExtra("nombreJuego", gameCat);
-        detalle.putExtra("detalladajuego",descripcionDetCat);
+        detalle.putExtra("detalladajuego", descripcionDetCat);
         detalle.putExtra("imagenJuego", numCat);
         startActivity(detalle);
     }
