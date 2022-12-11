@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/catItem"
+            android:title="@string/catgeoriaMenu">
+        </item>
+        <item
+            android:id="@+id/formItem"
+            android:title="@string/formularioMenu">
+        </item>
+        <item
+            android:id="@+id/listItem"
+            android:title="@string/listaMenu">
+        </item>
+        <item
+            android:id="@+id/acercaItem"
+            android:title="@string/acercaDeMenu"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/info_claro_foreground">
+        </item>
+        <item
+            android:id="@+id/homeItem"
+            android:title="@string/inicioMenu"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/home_claro_foreground">
+        </item>
+</menu>

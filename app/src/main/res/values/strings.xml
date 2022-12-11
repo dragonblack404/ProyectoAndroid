@@ -12,6 +12,7 @@
     <string name="catgeoriaMenu">Categorias</string>
     <string name="formularioMenu">Formulario</string>
     <string name="listaMenu">Lista de compra</string>
-    <string name="AcercaDe">Acerca de</string>
+    <string name="inicioMenu">Inicio</string>
+    <string name="acercaDeMenu">Acerca de</string>
 
 </resources>
