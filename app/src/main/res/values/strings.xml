@@ -29,12 +29,21 @@
     <string name="listaMenu">Lista de compra</string>
     <string name="inicioMenu">Inicio</string>
     <string name="acercaDeMenu">Acerca de</string>
+    <string name="titleCat">Categorias de Juegos</string>
+    <string name="atrasText">Atras</string>
 
     <!-- Strings varios -->
     <string name="textInitUp">Bienvenido a ES Application ^_^ </string>
     <string name="textInitDown">No dude en contactar con nosotros con sugerencias o errores, estaremos encantados de atender a vuestras peticiones</string>
-    <string name="titleCat">Categorias de Juegos</string>
-    <string name="atrasText">Atras</string>
+
+    <!-- String formulario -->
+    <string name="formularioText">Formulario</string>
+    <string name="nombreText">Nombre</string>
+    <string name="emailText">Email</string>
+    <string name="asuntoText">Asunto</string>
+    <string name="mensajeText">Mensaje</string>
+    <string name="terminosText">Acepto Términos y Condiciones</string>
+
 
 
 </resources>

@@ -1,40 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ScrollView"
-    android:layout_width="wrap_content"
+    android:layout_width="350dp"
     android:layout_height="wrap_content"
-    android:scrollbars="vertical">
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:orientation="vertical"
-        android:layout_height="fill_parent">
+    android:layout_gravity="center|top"
+    android:padding="15dp">
 
-        <!--Put form controls here-->
 
-        <TextView
-            android:id="@+id/TextViewTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="formulario"
-            android:textSize="10pt">
-        </TextView>
+    <TextView
+        android:id="@+id/TextViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/formularioMenu"
+        android:textAlignment="center"
+        android:textSize="15pt">
 
-        <EditText
-            android:id="@+id/EditTextName"
-            android:layout_height="wrap_content"
-            android:hint="nombre"
-            android:inputType="textPersonName"
-            android:layout_width="fill_parent">
-        </EditText>
+    </TextView>
 
-        <EditText
-            android:id="@+id/EditTextEmail"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:layout_width="fill_parent">
-        </EditText>
+    <EditText
+        android:id="@+id/EditTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewTitle"
+        android:hint="@string/nombreText"
+        android:inputType="textPersonName">
 
-    </LinearLayout>
-</ScrollView>
+    </EditText>
+
+    <EditText
+        android:id="@+id/EditTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditTextName"
+        android:hint="@string/emailText"
+        android:inputType="textEmailAddress"></EditText>
+
+    <EditText
+        android:id="@+id/EditTextAsunto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditTextEmail"
+        android:hint="@string/asuntoText"
+        android:inputType="textEmailAddress"></EditText>
+
+    <EditText
+        android:id="@+id/EditTextMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditTextAsunto"
+        android:hint="@string/mensajeText"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textEmailAddress"></EditText>
+
+    <CheckBox
+        android:id="@+id/checkForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EditTextMensaje"
+        android:text="@string/terminosText">
+
+    </CheckBox>
+
+    <ImageButton
+        android:id="@+id/enviarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkForm"
+        android:src="@drawable/ic_baseline_send_24">
+
+    </ImageButton>
+
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.example.projectprimtrim;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -16,9 +17,25 @@ public class PopUp extends AppCompatDialogFragment {
     @Override
     public android.app.Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Acerca de")
-                .setMessage("Esta aplicación ha sido creada en Android Studio programando en Java y su autor es Dónovan Castro Fariña estudiante de 2º de DAM.")
+        builder.setTitle("Acerca de..")
+                .setMessage("Esta aplicación ha sido creada en Android Studio programando en Java cómo proyecto final del primer trimestre de PGL.")
                 .setPositiveButton("Aceptar", (d, i) -> {});
         return builder.create();
     }
+
+
+    public Dialog todoCorrecto(Boolean validador){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        if (validador){
+            builder.setTitle("Enviado con éxito")
+                    .setMessage("Todos los campos estaban rellenos correctamente")
+                    .setPositiveButton("Continuar", (dialogInterface, i) -> {});
+        }else {
+            builder.setTitle("Envío fracasado")
+                    .setMessage("Algún campo no se rellenó correctamente")
+                    .setPositiveButton("Volver", (dialogInterface, i) -> {});
+        }
+        return builder.create();
+    };
+
 }
