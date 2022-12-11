@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.acercaItem:
                 Toast.makeText(this, "Acerca de..", Toast.LENGTH_SHORT).show();
+                cambiarActividad = new Intent(this, AcercaActivity.class);
+                startActivity(cambiarActividad);
                 break;
             case R.id.homeItem:
                 Toast.makeText(this, "Inicio", Toast.LENGTH_SHORT).show();
@@ -52,9 +54,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.formItem:
                 Toast.makeText(this, "Formulario", Toast.LENGTH_SHORT).show();
+                cambiarActividad = new Intent(this, FormularioActivity.class);
+                startActivity(cambiarActividad);
                 break;
             case R.id.listItem:
                 Toast.makeText(this, "Listado", Toast.LENGTH_SHORT).show();
+                cambiarActividad = new Intent(this, ListaActivity.class);
+                startActivity(cambiarActividad);
                 break;
         }
         return super.onOptionsItemSelected(item);

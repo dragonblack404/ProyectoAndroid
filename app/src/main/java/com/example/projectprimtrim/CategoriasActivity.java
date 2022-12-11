@@ -17,6 +17,7 @@ public class CategoriasActivity extends AppCompatActivity {
 
     public String descripcionCat, gameCat;
     int numCat;
+    public static Game gameSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +31,14 @@ public class CategoriasActivity extends AppCompatActivity {
 
         //Juegos para mostrar en la lista
         Game[] games = new Game[]{
-                new Game(getString(R.string.cat_bat), getString(R.string.des_bat), R.drawable.batt,getString(R.string.det_bat)),
+                new Game(getString(R.string.cat_bat), getString(R.string.des_bat), R.drawable.batt, getString(R.string.det_bat)),
                 new Game(getString(R.string.cat_cod), getString(R.string.des_cod), R.drawable.cod, getString(R.string.det_cod)),
-                new Game(getString(R.string.cat_fifa), getString(R.string.des_fifa), R.drawable.easport, getString(R.string.det_fifa),
+                new Game(getString(R.string.cat_fifa), getString(R.string.des_fifa), R.drawable.easport, getString(R.string.det_fifa)),
                 new Game(getString(R.string.cat_lol), getString(R.string.des_lol), R.drawable.lol, getString(R.string.det_lol))
-
         };
 
 
-        ListView listadoGames = (ListView) findViewById(R.id.lvItems);
+        ListView listadoGames = findViewById(R.id.lvItems);
 
         // Cabecera del listado
         View cabeceraGV = getLayoutInflater().inflate(R.layout.cabezera_lista, null);
@@ -49,25 +49,26 @@ public class CategoriasActivity extends AppCompatActivity {
         listadoGames.setAdapter(adaptador);
 
         /* Listener para controlar el pulsado de alguna de las opciones del listado. Recogemos los textos
-        del ítem pulsado y los mostramos en 2 controles TextView */
-
+        del ítem pulsado y la imagen */
 
 
         listadoGames.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //gameSelected = (Game) adapterView.getItemAtPosition(i);
 
 
-                TextView gameSeleccionado = (TextView) findViewById(R.id.gtTitle);
-                gameCat = ((Game)adapterView.getItemAtPosition(i)).getGame();
+
+                TextView gameSeleccionado = findViewById(R.id.gtTitle);
+                gameCat = ((Game) adapterView.getItemAtPosition(i)).getGame();
                 gameSeleccionado.setText(gameCat);
 
                 ImageView fotoSeleccionada = findViewById(R.id.gtPhoto);
-                numCat = ((Game)adapterView.getItemAtPosition(i)).getImgPhoto();
+                numCat = ((Game) adapterView.getItemAtPosition(i)).getImgPhoto();
                 fotoSeleccionada.setImageResource(numCat);
 
-                TextView descripcionSeleccionada = (TextView) findViewById(R.id.gtDescripcionDetallada);
-                descripcionCat = ((Game)adapterView.getItemAtPosition(i)).getDescripcion();
+                TextView descripcionSeleccionada = findViewById(R.id.gtDescripcionDetallada);
+                descripcionCat = ((Game) adapterView.getItemAtPosition(i)).getDescripcion();
                 descripcionSeleccionada.setText(descripcionCat);
 
                 lanzarActivity();
@@ -75,18 +76,18 @@ public class CategoriasActivity extends AppCompatActivity {
         });
     }
 
-    private void lanzarActivity(){
+    private void lanzarActivity() {
         Intent detalle;
         detalle = new Intent(this, DetalleLista.class);
         startActivity(detalle);
     }
 
     /*
-        Barra menu con el icono para volver al inicio
-         */
+    Barra menu con el icono para volver al inicio
+    */
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.items_menu, menu);
-        return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     /*
@@ -96,12 +97,13 @@ public class CategoriasActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         Intent cambiarActividad;
-        if (item != null){
-            cambiarActividad = new Intent(this, MainActivity.class);
-            startActivity(cambiarActividad);
+        cambiarActividad = new Intent(this, MainActivity.class);
+        switch (item.getItemId()) {
+            case R.id.homeItem:
+                startActivity(cambiarActividad);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
-
-
 }
