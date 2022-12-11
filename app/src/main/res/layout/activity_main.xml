@@ -8,37 +8,40 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageInit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:background="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/textInitDown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textInitUp"
         app:srcCompat="@drawable/portadaproject" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textInitUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="@string/textInitUp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toTopOf="@+id/imageInit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textInitDown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="116dp"
         android:text="@string/textInitDown"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

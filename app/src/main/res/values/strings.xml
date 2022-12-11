@@ -8,6 +8,13 @@
     <string name="cat_bat">Battlefield</string>
     <string name="cat_lol">League of Legends</string>
 
+    <!-- Descripcion juego -->
+    <string name="des_cod">Juego bélico arcade</string>
+    <string name="des_fifa">Juego deportivo de fútbol</string>
+    <string name="des_bat">Juego bélico con cierto grado de realismo</string>
+    <string name="des_lol">Juego estilo MOBA para PC</string>
+
+
     <!-- Nombres del menú -->
     <string name="catgeoriaMenu">Categorias</string>
     <string name="formularioMenu">Formulario</string>
@@ -18,6 +25,7 @@
     <!-- Strings varios -->
     <string name="textInitUp">Bienvenido a ES Application ^_^ </string>
     <string name="textInitDown">No dude en contactar con nosotros con sugerencias o errores, estaremos encantados de atender a vuestras peticiones</string>
+    <string name="titleCat">Categorias de Juegos</string>
 
 
 </resources>
