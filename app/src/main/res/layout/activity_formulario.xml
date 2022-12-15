@@ -1,78 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ScrollView"
-    android:layout_width="350dp"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center|top"
-    android:padding="15dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
 
+    <RelativeLayout
 
-    <TextView
-        android:id="@+id/TextViewTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/ScrollView"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/formularioMenu"
-        android:textAlignment="center"
-        android:textSize="15pt">
+        android:layout_gravity="center|top"
+        android:padding="15dp">
 
-    </TextView>
 
-    <EditText
-        android:id="@+id/EditTextName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TextViewTitle"
-        android:hint="@string/nombreText"
-        android:inputType="textPersonName">
+        <TextView
+            android:id="@+id/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/formularioMenu"
+            android:textAlignment="center"
+            android:textSize="15pt" />
 
-    </EditText>
+        <EditText
+            android:id="@+id/EditTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextViewTitle"
+            android:hint="@string/nombreText"
+            android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/EditTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/EditTextName"
-        android:hint="@string/emailText"
-        android:inputType="textEmailAddress"></EditText>
+        <EditText
+            android:id="@+id/EditTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EditTextName"
+            android:hint="@string/emailText"
+            android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/EditTextAsunto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/EditTextEmail"
-        android:hint="@string/asuntoText"
-        android:inputType="textEmailAddress"></EditText>
+        <EditText
+            android:id="@+id/EditTextAsunto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EditTextEmail"
+            android:hint="@string/asuntoText"
+            android:inputType="textEmailSubject" />
 
-    <EditText
-        android:id="@+id/EditTextMensaje"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/EditTextAsunto"
-        android:hint="@string/mensajeText"
-        android:imeOptions="flagNoExtractUi"
-        android:inputType="textEmailAddress"></EditText>
 
-    <CheckBox
-        android:id="@+id/checkForm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/EditTextMensaje"
-        android:text="@string/terminosText">
 
-    </CheckBox>
+        <EditText
+            android:id="@+id/EditTextMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EditTextAsunto"
+            android:hint="@string/mensajeText"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textImeMultiLine" />
+
+        <CheckBox
+            android:id="@+id/checkForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditTextMensaje"
+            android:text="@string/terminosText" />
+
+    </RelativeLayout>
 
     <ImageButton
         android:id="@+id/enviarButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/checkForm"
-        android:src="@drawable/ic_baseline_send_24">
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_send_24" />
 
-    </ImageButton>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
+</LinearLayout>
 
-</RelativeLayout>

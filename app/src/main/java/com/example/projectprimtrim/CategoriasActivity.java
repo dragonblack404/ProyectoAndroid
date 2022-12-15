@@ -37,16 +37,19 @@ public class CategoriasActivity extends AppCompatActivity {
                 new Game(getString(R.string.cat_lol), getString(R.string.des_lol), R.drawable.lol, getString(R.string.det_lol))
         };
 
-        /*
-        Posible fallo en cabecera de tituos
-         */
-        //TODO
 
         ListView listadoGames = findViewById(R.id.lvItems);
 
         // Cabecera del listado
-        View viewListado = getLayoutInflater().inflate(R.layout.cabezera_lista, null);
-        listadoGames.addHeaderView(viewListado);
+
+        View viewListado = null;
+
+        viewListado = getLayoutInflater().inflate(R.layout.cabezera_lista, null);
+/*
+Solucion al problema de la cabecera
+ */
+        if (listadoGames.getHeaderViewsCount() == 0)
+            listadoGames.addHeaderView(viewListado);
 
         // Instanciamos y asignamos el adaptador personalizado
         AdapterGame adaptador = new AdapterGame(this, games);

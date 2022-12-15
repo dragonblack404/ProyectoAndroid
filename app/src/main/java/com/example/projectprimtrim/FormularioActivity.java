@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,37 +29,32 @@ public class FormularioActivity extends AppCompatActivity {
         super.onResume();
 
         EditText nameField = (EditText) findViewById(R.id.EditTextName);
-        name = nameField.getText().toString();
-
         EditText emailField = (EditText) findViewById(R.id.EditTextEmail);
-        email = emailField.getText().toString();
-
         EditText asuntoField = (EditText) findViewById(R.id.EditTextAsunto);
-        asunto = asuntoField.getText().toString();
-
         EditText mensajeField = (EditText) findViewById(R.id.EditTextMensaje);
-        mensaje = mensajeField.getText().toString();
 
         ImageButton enviarButton = findViewById(R.id.enviarButton);
         CheckBox terminosCheck = findViewById(R.id.checkForm);
-/*
+
         enviarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (fullFormmulario() && terminosCheck.isChecked()){
-                    PopUp pop = new PopUp();
-                    pop.todoCorrecto(true);
-                    pop.show(getSupportFragmentManager(),"");
+                name = nameField.getText().toString();
+                email = emailField.getText().toString();
+                asunto = asuntoField.getText().toString();
+                mensaje = mensajeField.getText().toString();
+
+
+                val = fullFormmulario();
+                if (val && terminosCheck.isChecked()){
+                    Toast.makeText(view.getContext(), "Correo enviado con exito", Toast.LENGTH_SHORT).show();
                 }else {
-                    PopUp pop = new PopUp();
-                    pop.todoCorrecto(false);
-                    pop.show(getSupportFragmentManager(),"");
+                    Toast.makeText(view.getContext(), "Faltan campos por rellenar", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
 
- */
 
     }
 

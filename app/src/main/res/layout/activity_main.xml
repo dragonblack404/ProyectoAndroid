@@ -17,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInitUp"
-        app:srcCompat="@drawable/portadaproject" />
+        app:srcCompat="@drawable/portadaproject"
+        android:backgroundTint="@color/white"/>
 
     <TextView
         android:id="@+id/textInitUp"
@@ -27,11 +28,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="@string/textInitUp"
+        android:textSize="30dp"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toTopOf="@+id/imageInit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/textInitDown"
@@ -40,9 +44,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="116dp"
+        android:padding="10dp"
         android:text="@string/textInitDown"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textSize="12sp"
+        android:textSize="15sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

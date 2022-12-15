@@ -7,7 +7,7 @@
         android:id="@+id/homeItem"
         android:title="@string/inicioMenu"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/home_claro_foreground">
+        android:icon="@drawable/home_oscuro_foreground">
     </item>
 
 </menu>

@@ -1,9 +1,9 @@
 package com.example.projectprimtrim;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,26 +25,21 @@ public class DetalleLista extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        gameStringTitulo = getIntent().getStringExtra("nombrejuego");
+        gameStringTitulo = getIntent().getStringExtra("nombreJuego");
         gameStringDescripcion = getIntent().getStringExtra("detalladajuego");
-        imgIntFoto = getIntent().getIntExtra("imagenJuego", 0);
+        imgIntFoto = getIntent().getIntExtra("imagenJuego",0 );
 
-        gameDescripcion = (TextView) findViewById(R.id.gtDescripcionDetallada);
-        gameDescripcion.setText(gameStringDescripcion);
-
-        gameTitulo = (TextView) findViewById(R.id.gtTitle);
+        gameTitulo = findViewById(R.id.gtTitle);
         gameTitulo.setText(gameStringTitulo);
 
-        gameFoto = (ImageView) findViewById(R.id.gtPhoto);
+        gameDescripcion = findViewById(R.id.gtDescriptionDet);
+        gameDescripcion.setText(gameStringDescripcion);
+
+        gameFoto = findViewById(R.id.gtPhoto);
         gameFoto.setImageResource(imgIntFoto);
 
-        Button atrasBut = findViewById(R.id.atrasButton);
-        atrasBut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        ImageButton atrasBut =  findViewById(R.id.atrasButton);
+        atrasBut.setOnClickListener(view -> finish());
     }
 
 

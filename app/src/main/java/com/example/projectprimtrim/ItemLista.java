@@ -1,6 +1,8 @@
 package com.example.projectprimtrim;
 
-public class ItemLista {
+import java.io.Serializable;
+
+public class ItemLista implements Serializable {
 
     private String objeto;
     private int precio;

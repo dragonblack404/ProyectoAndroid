@@ -41,4 +41,3 @@ public class ListaActivity extends AppCompatActivity {
         }
     }
 }
-

@@ -16,11 +16,22 @@
 
 
     <!-- Descripcion detallada juego -->
-    <string name="det_cod">Call of Duty es una serie de videojuegos de disparos en primera persona, de estilo bélico, desarrollada principal e inicialmente por Infinity Ward, Treyarch, Sledgehammer Games y en menor proporción Raven Software y distribuida por Activision.
+    <string name="det_cod">Call of Duty es una serie de videojuegos de disparos en
+        primera persona, de estilo bélico, desarrollada principal e inicialmente por
+        Infinity Ward, Treyarch, Sledgehammer Games y en menor proporción Raven Software
+        y distribuida por Activision.
     </string>
-    <string name="det_fifa">FIFA es una saga de videojuegos de fútbol publicados anualmente por Electronic Arts bajo el sello de EA Sports creado en Japón. Cuando la saga comenzó a finales de 1993 se destacó por ser el primero en tener una licencia oficial de la FIFA</string>
-    <string name="det_bat">La franquicia Battlefield es una serie de videojuegos de disparos en primera persona, de estilo bélico, desarrollada principalmente por EA Digital Illusion CE y distribuida por Electronic Arts.</string>
-    <string name="det_lol">League of Legends, es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games. Inspirándose en Defense of the Ancients, un mapa personalizado para Warcraft III, los fundadores de Riot buscaron desarrollar un juego independiente del mismo género.</string>
+    <string name="det_fifa">FIFA es una saga de videojuegos de fútbol publicados
+        anualmente por Electronic Arts bajo el sello de EA Sports creado en Japón.
+        Cuando la saga comenzó a finales de 1993 se destacó por ser el primero en tener una
+        licencia oficial de la FIFA</string>
+    <string name="det_bat">La franquicia Battlefield es una serie de videojuegos
+        de disparos en primera persona, de estilo bélico, desarrollada principalmente
+        por EA Digital Illusion CE y distribuida por Electronic Arts.</string>
+    <string name="det_lol">League of Legends, es un videojuego multijugador de arena
+        de batalla en línea desarrollado y publicado por Riot Games. Inspirándose en
+        Defense of the Ancients, un mapa personalizado para Warcraft III, los fundadores
+        de Riot buscaron desarrollar un juego independiente del mismo género.</string>
 
 
     <!-- Nombres del menú -->
@@ -33,8 +44,8 @@
     <string name="atrasText">Atras</string>
 
     <!-- Strings varios -->
-    <string name="textInitUp">Bienvenido a ES Application ^_^ </string>
-    <string name="textInitDown">No dude en contactar con nosotros con sugerencias o errores, estaremos encantados de atender a vuestras peticiones</string>
+    <string name="textInitUp">Bienvenido a ES Application</string>
+    <string name="textInitDown">Esperamos que esta aplicación sea de su agrado, si tiene cualquier problema o sugerencia no dude en ponerse en contacto con nosotros</string>
 
     <!-- String formulario -->
     <string name="formularioText">Formulario</string>
@@ -43,7 +54,6 @@
     <string name="asuntoText">Asunto</string>
     <string name="mensajeText">Mensaje</string>
     <string name="terminosText">Acepto Términos y Condiciones</string>
-
 
 
 </resources>
